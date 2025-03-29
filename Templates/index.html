@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Predictions</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script defer src="/static/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Next Game Prediction</h1>
+        <div id="loading">
+            <img src="/static/loader.gif" alt="Loading..." />
+        </div>
+        <div id="prediction-box" class="hidden">
+            {% if prediction %}
+                <p>Period: <b>{{ prediction.period }}</b></p>
+                <p>Signal: <b class="{{ 'big' if prediction.signal == 'BIG' else 'small' }}">{{ prediction.signal }}</b></p>
+                <p>Strong Numbers: <b>{{ prediction.number[0] }} & {{ prediction.number[1] }}</b></p>
+            {% else %}
+                <p>No prediction available.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
