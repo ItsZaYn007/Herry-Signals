@@ -1,6 +1,0 @@
-fastapi
-uvicorn
-numpy
-requests
-python-dotenv
-jinja2
