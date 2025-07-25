@@ -166,7 +166,7 @@
     {% if prediction %}
     <div class="card">
       <div class="info-row">
-        <div class="period">Period: {{ prediction.period[-3:] }}</div>
+        <div class="period">Period: {{ prediction.last_issue[-3:] }}</div>
         <div class="signal">Signal: {{ prediction.signal }}</div>
       </div>
     </div>
